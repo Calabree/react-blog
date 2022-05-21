@@ -7,7 +7,7 @@ const Create = () => {
   const [author, setAuthor] = useState("mario");
   const [isPending, setIsPending] = useState(false);
 
-  const history = useNavigate();
+  const nav = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault(); //prevents default refresh on submit
     const blog = { title, body, author };
@@ -20,7 +20,7 @@ const Create = () => {
       console.log("new blog added");
       setIsPending(false);
     });
-    history("/");
+    nav("/");
   };
 
   return (
